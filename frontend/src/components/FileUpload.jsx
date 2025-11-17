@@ -28,8 +28,8 @@ function FileUpload({ onUpload, status, message }) {
 
   return (
     <div className="file-upload">
-      <h2 className="section-title">Upload Documents</h2>
-      <p className="section-description">
+      <h2 className="file-upload__title">Upload Documents</h2>
+      <p className="file-upload__description">
         Upload PDF files to build your knowledge base
       </p>
 
@@ -39,32 +39,32 @@ function FileUpload({ onUpload, status, message }) {
         multiple
         accept=".pdf"
         onChange={handleFileSelect}
-        className="file-input"
+        className="file-upload__input"
       />
 
       <button
         onClick={handleButtonClick}
-        className="select-files-button"
+        className="file-upload__button"
         disabled={status === 'uploading'}
       >
         Select PDF Files
       </button>
 
       {selectedFiles.length > 0 && (
-        <div className="selected-files">
-          <p className="selected-count">
+        <div className="file-upload__selected">
+          <p className="file-upload__count">
             {selectedFiles.length} file(s) selected
           </p>
-          <ul className="file-list">
+          <ul className="file-upload__list">
             {selectedFiles.map((file, index) => (
-              <li key={index} className="file-item">
+              <li key={index} className="file-upload__file">
                 {file.name}
               </li>
             ))}
           </ul>
           <button
             onClick={handleUploadClick}
-            className="upload-button"
+            className="file-upload__button"
             disabled={status === 'uploading'}
           >
             {status === 'uploading' ? 'Uploading...' : 'Upload'}
@@ -73,7 +73,7 @@ function FileUpload({ onUpload, status, message }) {
       )}
 
       {message && (
-        <div className={`upload-status status-${status}`}>
+        <div className={`file-upload__status file-upload__status--${status}`}>
           {message}
         </div>
       )}
