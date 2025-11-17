@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+venv/
+ENV/
+chroma_db/
+uploads/
+*.pdf
+.DS_Store
+
+# IDE/editor
+.vscode/
+
+# Test/coverage
+.pytest_cache/
+.coverage

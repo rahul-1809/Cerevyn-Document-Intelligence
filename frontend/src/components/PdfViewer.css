@@ -1,0 +1,5 @@
+.pdf-viewer { border: 1px solid #e6e6e6; border-radius: 10px; margin-bottom: 16px; background: #fff; overflow: hidden; }
+.pdf-viewer__header { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; background: #f8f9fb; border-bottom: 1px solid #eef0f3; }
+.pdf-viewer__title { font-size: 14px; font-weight: 600; color: #1f2937; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pdf-viewer__close { border: 1px solid #e0e4ea; background: #ffffff; color: #1f2937; border-radius: 6px; padding: 2px 8px; font-size: 14px; cursor: pointer; }
+.pdf-viewer__frame { height: 420px; }
